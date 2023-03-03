@@ -1,38 +1,48 @@
-CREATE TABLE action (
+CREATE TABLE action IF NOT EXISTS(
   id SERIAL PRIMARY KEY,
   name varchar(40) NOT NULL
 );
 
-CREATE TABLE personality (
+CREATE TABLE skill IF NOT EXISTS(
   id SERIAL PRIMARY KEY,
-  name varchar(20) NOT NULL,
-  description varchar(100) NOT NULL
+  name varchar(40) NOT NULL
 );
 
-CREATE TABLE creature (
+CREATE TABLE profession IF NOT EXISTS(
   id SERIAL PRIMARY KEY,
-  name varchar(20) NOT NULL,
+  name varchar(40) NOT NULL
+);
+
+
+
+CREATE TABLE personality IF NOT EXISTS(
+  id SERIAL PRIMARY KEY,
+  name varchar(40) NOT NULL,
+  description text NOT NULL
+);
+
+CREATE TABLE creature IF NOT EXISTS(
+  id SERIAL PRIMARY KEY,
+  name varchar(40) NOT NULL,
   is_human boolean NOT NULL,
   ki_grade int NOT NULL,
-  personality_id int REFERENCES personality (id) NULL
+  personality_id int REFERENCES personality (id) NULL,
+  profession_id int REFERENCES profession (id) NULL
 );
 
-
-
-
-CREATE TABLE creatures_ability (
+Create table creature_skill IF NOT EXISTS(
   id SERIAL PRIMARY KEY,
   creature_id int REFERENCES creature (id) NOT NULL,
-  action_id int REFERENCES action (id) NOT NULL
+  skill_id int REFERENCES skill (id) NOT NULL
 );
 
 
-CREATE TABLE creature_action (
+CREATE TABLE creature_action IF NOT EXISTS(
   id SERIAL PRIMARY KEY,
   creature_id int REFERENCES creature (id) NOT NULL,
   action_id int REFERENCES action (id) NOT NULL,
-  start_time time NOT NULL,
-  end_time time NOT NULL
+  start_time time NULL,
+  end_time time NULL
 );
 
 
