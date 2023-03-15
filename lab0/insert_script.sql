@@ -28,7 +28,7 @@ INSERT INTO s368982.personality (name, description) VALUES ('Спокойная'
 
 
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('ЭАЛ', false, 50, null, 7);
-INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('ЭАЛ-2', false, 50, 2, null, null);
+INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('ЭАЛ-2', false, 50, 2, null);
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_1', true, 70, 3, 2);
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_2', true, 90, 4, 1);
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_3', true, 100, 4, 1);
@@ -36,25 +36,28 @@ INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, professi
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Человек', true, 70, 1, 3);
 
 
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (1, 6);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (2, 6);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (1, 3);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (1, 4);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (3, 5);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (4, 5);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (5, 5);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (6, 3);
-INSERT INTO s368982.creatures_skill (creature_id, action_id) VALUES (6, 4);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (1, 6);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (2, 6);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (1, 3);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (1, 4);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (3, 5);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (4, 5);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (5, 5);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (6, 3);
+INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (6, 4);
+
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (1, 1, null, '0:00:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (2, 2, '00:20:00', '00:30:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (2, 3, '00:30:00', '00:40:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (3, 4, '00:40:00', '00:50:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (1, 5, '00:50:00', '01:00:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (2, 5, '01:00:00', '01:10:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (3, 5, '01:10:00', '01:20:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (4, 5, '01:20:00', '01:30:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (5, 5, '01:30:00', '01:40:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (6, 5, '01:40:00', '01:50:00');
+INSERT INTO s368982.creature_action (creature_id, action_id, start_time, end_time) VALUES (7, 5, '01:50:00', '02:00:00');
 
 
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (1, 1, null, 00:00:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (2, 2, 00:20:00, 00:30:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (2, 3, 00:30:00, 00:40:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (3, 4, 00:40:00, 00:50:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (1, 5, 00:50:00, 01:00:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (2, 5, 01:00:00, 01:10:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (3, 5, 01:10:00, 01:20:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (4, 5, 01:20:00, 01:30:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (5, 5, 01:30:00, 01:40:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (6, 5, 01:40:00, 01:50:00);
-INSERT INTO s368982.creatures_action (creature_id, action_id, start_time, end_time) VALUES (7, 5, 01:50:00, 02:00:00);
+
+
