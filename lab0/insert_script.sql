@@ -24,16 +24,20 @@ INSERT INTO s368982.profession(name) VALUES ('Подопытный');
 INSERT INTO s368982.personality (name, description) VALUES ('Спокойная', 'Спокойная личность');
 INSERT INTO s368982.personality (name, description) VALUES ('Агрессивная', 'Агрессивная личность');
 INSERT INTO s368982.personality (name, description) VALUES ('Нейтральная', 'Нейтральная личность');
-INSERT INTO s368982.personality (name, description) VALUES ('Спокойная', 'Спокойная личность');
+INSERT INTO s368982.personality (name, description) VALUES ('Спокойная', 'Спокойная личность и иногда жестокая');
+INSERT INTO s368982.personality (name, description) VALUES ('Агрессивная', 'Агрессивная личность и иногда жестокая');
+INSERT INTO s368982.personality (name, description) VALUES ('Нейтральная', 'Нейтральная личность и иногда жестокая');
 
 
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('ЭАЛ', false, 50, null, 7);
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('ЭАЛ-2', false, 50, 2, null);
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_1', true, 70, 3, 2);
-INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_2', true, 90, 4, 1);
+INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_2', true, 90, 5, 1);
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_3', true, 100, 4, 1);
 INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Ученый_4', true, 100, 1, 1);
-INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Человек', true, 70, 1, 3);
+INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Человек', true, 70, 6, 3);
+INSERT INTO s368982.creature (name, is_human, ki_grade, personality_id, profession_id) VALUES ('Человек', true, 70, 6, 3);
+
 
 
 INSERT INTO s368982.creature_skill (creature_id, skill_id) VALUES (1, 6);

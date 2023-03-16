@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS profession(
 CREATE TABLE IF NOT EXISTS personality(
   id SERIAL PRIMARY KEY,
   name varchar(40) NOT NULL,
-  description text NOT NULL
+  description text NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS creature(
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS creature(
   name varchar(40) NOT NULL,
   is_human boolean NOT NULL,
   ki_grade ki_value NOT NULL,
-  personality_id int REFERENCES personality (id) NULL,
+  personality_id int REFERENCES personality (id) NULL UNIQUE,
   profession_id int REFERENCES profession (id) NULL
 );
 
